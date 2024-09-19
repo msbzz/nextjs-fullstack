@@ -1,0 +1,23 @@
+{
+  "name": "nextjs-fullstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/msbzz/nextjs-fullstack.git",
+  "author": "Marco <mbarozzi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "^14.2.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.5",
+    "@types/react": "18.3.7",
+    "typescript": "5.6.2"
+  }
+}
