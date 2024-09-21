@@ -6,7 +6,10 @@ import Feed from "./patterns/Feed/Feed";
 
 export default function HomeScreen(){
  return(
-  <Box tag='main' >
+  <Box
+  tag='main'
+  styleSheet={{backgroundColor:'red'}}
+  >
    <BackGround/>
    <Menu/>
    <Feed>
