@@ -1,6 +1,9 @@
+import { typography } from "../theme/defaults/typography.ts";
+
 const theme = {
   typography:{
-    fontFamily:"Open Sans.sans-serif",
+    //fontFamily:"Roboto Condensed,Open Sans,sans-serif",
+    ...typography,
 
     }
 };
