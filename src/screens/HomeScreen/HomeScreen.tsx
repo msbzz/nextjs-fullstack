@@ -9,13 +9,13 @@ export default function HomeScreen(){
  return(
   <Box
   tag='main'
-  styleSheet={{backgroundColor:'blue',color:'white',fontSize:'28px',padding:'40px'}}
+  styleSheet={{backgroundColor:'blue',color:'white' }}
   >
    <BackGround/>
    <Menu/>
    <Feed>
      <Feed.Header/>
-     <Text>
+     <Text variant='display1'>
         Últimas Atualizações
      </Text>
      <Feed.Posts/>
