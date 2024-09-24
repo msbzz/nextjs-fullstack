@@ -9,7 +9,7 @@ export default function HomeScreen(){
  return(
   <Box
   tag='main'
-  styleSheet={{backgroundColor:'blue',color:'white' }}
+  // styleSheet={{backgroundColor:'blue',color:'white' }}
   >
    <BackGround/>
    <Menu/>
