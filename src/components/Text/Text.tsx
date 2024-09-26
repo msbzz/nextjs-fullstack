@@ -6,25 +6,31 @@ import { useTheme } from "@src/theme/ThemeProvider";
 
 interface TextProps {
   variant?:ThemeTypographyVariants
-  tag?: "p" | "li" | "h1" | "h2" | string;
+  tag?: "a" | "p" | "li" | "h1" | "h2" | string;
   children?: React.ReactNode;
-  styleSheet?:StyleSheet
+  styleSheet?:StyleSheet;
+  ref:any;
 }
-export default function Text({
+const Text = React.forwardRef(({
+  tag,
   styleSheet,
   variant,
   ...props
-}:TextProps) {
+}:TextProps,ref)=> {
   const theme=useTheme();
   const textVariant =theme.typography.variants[variant];
 
   return (
-    <BaseCompoment styleSheet={{
+    <BaseCompoment as ={tag} styleSheet={{
       fontFamily: theme.typography.fontFamily,
       ...textVariant,
       ...styleSheet
-    }} {...props} />
+    }}
+    ref={ref}
+    {...props} />
   );
-}
+})
 
 Text.defaultProps = { tag: 'p',variant:'body2' };
+
+export default Text;

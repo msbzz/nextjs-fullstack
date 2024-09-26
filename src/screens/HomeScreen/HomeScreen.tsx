@@ -15,13 +15,13 @@ export default function HomeScreen(){
   tag='main'
   styleSheet={{
     flex:1,
-    backgroundColor:theme.colors.primary.x400,
-    color:'white' }}
+    backgroundColor:theme.colors.positive.x100,
+    color:'black' }}
   >
    <Link href='/sobre'>
    Indo para pagina sobre
    </Link>
-   <Link href='http://google.com'>
+   <Link colorVariant="negative" href='http://google.com'>
    Indo para pagina do google
    </Link>
    <BackGround/>
