@@ -22,7 +22,7 @@ export default function Feed({ children }) {
 Feed.Header = () => {
   return (
     <Box>
-      <Button.Base>
+      <Button.Base href="http://github.com/omariosouto.png">
         <Image
           styleSheet={{ width: "128px", height: "128px", borderRadius: "100%" }}
           src="http://github.com/omariosouto.png"
