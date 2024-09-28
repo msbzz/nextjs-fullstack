@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 const StyledButton = styled(Text)<any>``;
 
-interface ButtonBase {
+export interface ButtonBaseProps {
   href?:string;
   children: React.ReactNode;
   textVariant?: ThemeTypographyVariants;
@@ -23,7 +23,7 @@ export default function ButtonBase({
   children,
   href,
   ...props
-}: ButtonBase) {
+}: ButtonBaseProps) {
   const router = useRouter();
   const ref = React.useRef();
   const isLink=Boolean(href);
@@ -37,9 +37,9 @@ export default function ButtonBase({
       Tag={Tag}
       href={href}
       {...props}
-      styleSheetyle={{
+      styleSheet={{
         border:'0',
-        backgroundColor:'tranparent',
+        backgroundColor:'transparent',
         color:'inherit',
         outline:'0',
         cursor:'pointer',
