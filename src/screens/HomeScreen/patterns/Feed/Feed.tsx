@@ -5,14 +5,28 @@ import Icon from "@src/components/Icon/Icon";
 import Image from "@src/components/Image/Image";
 import Link from "@src/components/Link/Link";
 import Button from "@src/components/Button/Button";
+import { useTheme } from "@src/theme/ThemeProvider";
+
 
 interface FeedProps {
   children: React.ReactNode;
 }
 
 export default function Feed({ children }) {
+  const theme = useTheme();
   return (
-    <Box>
+    <Box
+      styleSheet={{
+        backgroundColor: theme.colors.neutral.x000,
+        marginTop:'-228px',
+        width:'100%',
+        maxWidth:'683px',
+        borderRadius:'8px',
+        paddingVertical:'40px',
+        paddingHorizontal:'32px',
+
+      }}
+    >
       <Text>Feed Base</Text>
       {children}
     </Box>

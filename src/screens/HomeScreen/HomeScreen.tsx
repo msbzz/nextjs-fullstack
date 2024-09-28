@@ -15,17 +15,23 @@ export default function HomeScreen(){
   tag='main'
   styleSheet={{
     flex:1,
-    backgroundColor:theme.colors.positive.x100,
-    color:'black' }}
+    backgroundColor:theme.colors.neutral.x000,
+    alignItems:'center',
+   }}
   >
-   <Link href='/sobre'>
+   {/* <Link href='/sobre'>
    Indo para pagina sobre
    </Link>
    <Link colorVariant="negative" href='http://google.com'>
    Indo para pagina do google
-   </Link>
+   </Link> */}
    <BackGround/>
    <Menu/>
+   <Feed>
+   <Feed.Header/>
+   </Feed>
+   <Footer/>
+   {/* <Menu/>
    <Feed>
      <Feed.Header/>
      <Text variant='display1'>
@@ -33,7 +39,7 @@ export default function HomeScreen(){
      </Text>
      <Feed.Posts/>
    </Feed>
-   <Footer/>
+   <Footer/> */}
   </Box>
  )
 }
