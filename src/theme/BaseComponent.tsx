@@ -3,29 +3,29 @@ import styled from "styled-components";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { parseStyleSheet } from "@skynexui/responsive_stylesheet";
 
-interface StyledBaseCompoment{
+interface StyledBaseComponent{
   styleSheet?:StyleSheet;
   ref:any;
 }
 
-const StyledBaseComponent = styled.div<StyledBaseCompoment>`
+const StyledBaseComponent = styled.div<StyledBaseComponent>`
   display:flex;
   flex-direction:column;
   align-content:flex-start;
-  flex-shirink:0;
+  flex-shrink:0;
    ${({styleSheet})=>parseStyleSheet(styleSheet)}
 `
-interface BaseCompomentProps {
+interface BaseComponentProps {
   styleSheet:StyleSheet;
   [key:string]:any;
 };
 
-export const BaseCompoment=React.forwardRef<unknown,BaseCompomentProps>((props,ref)=>{
+export const BaseComponent=React.forwardRef<unknown,BaseComponentProps>((props,ref)=>{
   return(
     <StyledBaseComponent ref={ref} {...props}/>
   )
 });
 
-BaseCompoment.defaultProps= {
+BaseComponent.defaultProps= {
   styleSheet:{},
 }

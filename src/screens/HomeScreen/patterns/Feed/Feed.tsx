@@ -36,24 +36,28 @@ export default function Feed({ children }) {
 Feed.Header = () => {
   return (
     <Box>
-      <Button size={"xl"}>
-        Olá Pessoas
-      </Button>
+
       <Button.Base href="http://github.com/omariosouto.png">
         <Image
           styleSheet={{ width: "128px", height: "128px", borderRadius: "100%" }}
           src="http://github.com/omariosouto.png"
           alt="imagem perfil"
         />
+        {/* <Text tag='h1' variant="heading4">
+          Mario Souto
+        </Text> */}
       </Button.Base>
-      <Link href="https://youtube.com/DevSoutinho">
+            <Text tag='h1' variant="heading4">
+          Mario Souto
+        </Text>
+      {/* <Link href="https://youtube.com/DevSoutinho">
         <Icon name="youtube" />
       </Link>
-      {/* <Icon name="youtube" /> */}
+
       <Icon name="twitter" />
       <Icon name="instagram" />
       <Icon name="github" />
-      <Text>Feed Header</Text>
+     */}
     </Box>
   );
 };

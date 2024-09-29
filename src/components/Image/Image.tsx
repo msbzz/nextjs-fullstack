@@ -1,4 +1,4 @@
-import { BaseCompoment } from "@src/theme/BaseCompoment";
+import { BaseComponent } from "@src/theme/BaseComponent";
 import { StyleSheet } from "@src/theme/StyleSheet";
 
 interface ImageProps{
@@ -10,7 +10,7 @@ interface ImageProps{
 
 export default function Image({src,alt, ...props}:ImageProps){
   return (
-    <BaseCompoment
+    <BaseComponent
     as='img'
     src={src}
     alt={alt}

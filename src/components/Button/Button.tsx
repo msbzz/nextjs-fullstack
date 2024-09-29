@@ -6,6 +6,7 @@ import { useTheme } from "@src/theme/ThemeProvider";
 import { buttonSize, ButtonSize } from "./buttonSize";
 
 interface ButtonProps extends ButtonBaseProps {
+  styleSheet?:any
   fullWidth?: boolean;
   children: React.ReactNode;
   colorVariant?: ColorVariant;
@@ -25,7 +26,10 @@ export default function Button({
   return (
     <ButtonBase
       styleSheet={{
-        alignSelf: "flex-start",
+        alignSelf: 'flex-start',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // [Color + Variant]
         ...colorVariantBy(theme, colorVariant, variant),
         ...buttonSize[size],
         ...(fullWidth && { alignSelf: "initial" }),

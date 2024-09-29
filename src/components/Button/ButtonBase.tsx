@@ -34,7 +34,7 @@ export default function ButtonBase({
   return (
     <StyledButton
       ref={ref}
-      Tag={Tag}
+      tag={Tag}
       href={href}
       {...props}
       styleSheet={{

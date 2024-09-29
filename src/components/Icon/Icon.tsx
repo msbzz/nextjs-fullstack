@@ -1,4 +1,4 @@
-import { BaseCompoment } from "@src/theme/BaseCompoment";
+import { BaseComponent } from "@src/theme/BaseComponent";
 import * as icons from "./svgs/_index";
 
 const iconSizes = {
@@ -20,7 +20,7 @@ export default function Icon({ size, name,...props }: IconProps) {
   if (!CurrentIcon) return `"${name}" is not valid <Icon/>`;
   return (
     // <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <BaseCompoment
+    <BaseComponent
       as="svg"
       styleSheet={{
         width: iconSizes[size],
@@ -33,7 +33,7 @@ export default function Icon({ size, name,...props }: IconProps) {
       {...props}
     >
       <CurrentIcon />
-    </BaseCompoment>
+    </BaseComponent>
   );
 }
 

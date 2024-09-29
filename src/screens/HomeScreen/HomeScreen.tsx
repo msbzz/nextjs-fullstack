@@ -19,27 +19,13 @@ export default function HomeScreen(){
     alignItems:'center',
    }}
   >
-   {/* <Link href='/sobre'>
-   Indo para pagina sobre
-   </Link>
-   <Link colorVariant="negative" href='http://google.com'>
-   Indo para pagina do google
-   </Link> */}
+
    <BackGround/>
    <Menu/>
    <Feed>
    <Feed.Header/>
    </Feed>
    <Footer/>
-   {/* <Menu/>
-   <Feed>
-     <Feed.Header/>
-     <Text variant='display1'>
-        Últimas Atualizações
-     </Text>
-     <Feed.Posts/>
-   </Feed>
-   <Footer/> */}
-  </Box>
+   </Box>
  )
 }
