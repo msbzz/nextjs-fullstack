@@ -1,4 +1,3 @@
-//import { StyleSheet } from "@src/theme/StyleSheet";
 import ButtonBase, { ButtonBaseProps } from "./ButtonBase";
 import React from "react";
 import { ColorVariant, colorVariantBy, Variant } from "./colorVariantBy";
@@ -6,21 +5,21 @@ import { useTheme } from "@src/theme/ThemeProvider";
 import { buttonSize, ButtonSize } from "./buttonSize";
 
 interface ButtonProps extends ButtonBaseProps {
-  styleSheet?:any
+  styleSheet?: any;
   fullWidth?: boolean;
   children: React.ReactNode;
   colorVariant?: ColorVariant;
   variant?: Variant;
-  size?:ButtonSize;
+  size?: ButtonSize;
 }
 
 export default function Button({
   styleSheet,
   children,
-  fullWidth,
-  colorVariant,
-  variant,
-  size,
+  fullWidth = false, // Define default value here
+  colorVariant = "primary", // Define default value here
+  variant = "contained", // Define default value here
+  size = "md", // Define default value here
 }: ButtonProps) {
   const theme = useTheme();
   return (
@@ -41,10 +40,4 @@ export default function Button({
   );
 }
 
-Button.defaultProps = {
-  fullWidth: false,
-  variant: "contained",
-  colorVariant: "primary",
-  size:'md',
-};
 Button.Base = ButtonBase;
