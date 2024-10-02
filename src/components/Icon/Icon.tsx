@@ -18,6 +18,7 @@ interface IconProps {
 export default function Icon({
   size= "md",
   name="default_icon",
+  styleSheet,
   ...props }: IconProps) {
   const CurrentIcon = icons[name];
   if (!CurrentIcon) return `"${name}" is not valid <Icon/>`;
