@@ -29,6 +29,7 @@ export default function Icon({
       styleSheet={{
         width: iconSizes[size],
         height: iconSizes[size],
+		 ...styleSheet,
       }}
       color="inherit"
       fill="currentColor"
